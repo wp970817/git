@@ -39,11 +39,28 @@ gulp.task("servers",function(){
             }
             var pathname = require("url").parse(req.url).pathname;//文件路劲
             if(path.extname(req.url)){   //是否path.extname  路径的后缀名
-                console.log(111)
                 res.end(fs.readFileSync(path.join(__dirname,"src",pathname)));
             }else{
                 if(pathname === "/api/data"){
                     res.end(JSON.stringify(datas))
+                }else if(pathname === "/api/serche"){
+                    
+                    // var str = "";
+                    // req.on("data",function(chunk){
+                    //     str += chunk;
+                    // })
+                    // req.on("end",function(){
+                    //     res.end("12")
+                    // })
+                    var s = url.parse(req.url,true).query;
+                    var arr = [];
+                    datas.forEach((file)=> {
+                        if(file.name.match(s.name)){
+                            arr.push(file);
+                        }
+                    });
+                    console.log(arr)
+                    res.end(JSON.stringify(arr));
                 }
             }
             
