@@ -1,5 +1,5 @@
 var gulp = require("gulp");
-
+var datas = require("./src/data/data.json");
 var servers = require("gulp-webserver"); // 起服务
 
 var fs=require("fs");
@@ -42,7 +42,9 @@ gulp.task("servers",function(){
                 console.log(111)
                 res.end(fs.readFileSync(path.join(__dirname,"src",pathname)));
             }else{
-                console.log(11)
+                if(pathname === "/api/data"){
+                    res.end(JSON.stringify(datas))
+                }
             }
             
         }
