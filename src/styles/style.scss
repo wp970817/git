@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+$font-size: 37.5px !default;
+@function rem($px){
+    @return $px / $font-size * 1rem;
+}
+body,html{
+    width: 100%;
+    height: 100%;
+}
+.container{
+    @extend body;
+    display: flex;
+    flex-direction: column;
+
+    header{
+        width: 100%;
+        height: auto;
+        background: #ccc;
+        
+        >.ser{
+            width: 100%;
+            height: rem(50px);
+            display: flex;
+            flex-direction: row;
+            padding: rem(10px);
+
+            input{
+                flex: 8;
+                border-radius: rem(10px);
+                border: 1px solid #ccc;
+                padding-left: rem(10px);
+                font-size: rem(14px);
+            }
+            button{
+                flex: 2;
+                margin-left: rem(6px);
+                border-radius: rem(15px);
+                border: 0;
+                background: red;
+                color: azure;
+                font-size: rem(16px);
+            }
+        }
+        >.all{
+            width: 100%;
+            padding: rem(10px) 0;
+            display: flex;
+            flex-direction: row;
+
+            span{
+                flex: 1;
+                font-size: rem(13px);
+                font-weight: 900;
+                text-align: center;
+            }
+        }
+        
+       
+    }
+
+    main{
+        flex: 1;
+        width: 100%;
+        background: gainsboro;
+        >div{
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: row;
+            dl{
+                flex: 1;
+                display: inline-block;
+                
+                padding: rem(10px);
+                img{
+                    width: 100%;
+                    height: rem(120px);
+                }
+                dd{
+                    p{
+                        font-size: rem(15px);
+                        
+                        span{
+                            font-weight: 800;
+                        }
+                    }
+                    b{
+                        font-size: rem(17px);
+                        color: red;
+                    }
+                }
+            }
+        }
+        
+        
+    }
+}

@@ -1,0 +1,37 @@
+[
+    {
+        "img" : "./imgs/2.jpg",
+        "name" : "羽绒服",
+        "price" : 325
+    },
+    {
+        "img" : "./imgs/3.jpg",
+        "name" : "我的",
+        "price" : 325
+    },
+    {
+        "img" : "./imgs/4.jpg",
+        "name" : "毛线",
+        "price" : 325
+    },
+    {
+        "img" : "./imgs/5.jpg",
+        "name" : "裤子",
+        "price" : 325
+    },
+    {
+        "img" : "./imgs/6.jpg",
+        "name" : "羽绒服",
+        "price" : 325
+    },
+    {
+        "img" : "./imgs/7.jpg",
+        "name" : "热死了",
+        "price" : 325
+    },
+    {
+        "img" : "./imgs/8.jpg",
+        "name" : "羽绒",
+        "price" : 325
+    }
+]
